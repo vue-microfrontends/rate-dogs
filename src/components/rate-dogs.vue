@@ -44,6 +44,7 @@ export default {
     newRating() {
       const dogs = JSON.parse(localStorage.getItem("dogs")) || [];
       dogs.push({ url: this.currentDogUrl, rating: Number(this.rating) });
+      localStorage.setItem("dogs", JSON.stringify(dogs));
       this.newDog();
     }
   }
