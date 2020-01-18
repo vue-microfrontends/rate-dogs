@@ -7,7 +7,7 @@
           <img :src="currentDogUrl" alt="dog photo" />
         </div>
         <div class="actions">
-          <select v-model="rating" v-on:input="newRating()">
+          <select v-model="rating" @input="newRating">
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
@@ -41,7 +41,8 @@ export default {
           this.rating = "10";
         });
     },
-    newRating() {
+    newRating(evt) {
+      this.rating = evt.target.value;
       const dogs = JSON.parse(localStorage.getItem("dogs")) || [];
       dogs.push({ url: this.currentDogUrl, rating: Number(this.rating) });
       localStorage.setItem("dogs", JSON.stringify(dogs));
