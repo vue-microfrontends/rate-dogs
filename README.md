@@ -1,5 +1,7 @@
 # Vue Microfrontends rate dogs
 
+[![CircleCI](https://circleci.com/gh/vue-microfrontends/rate-dogs.svg?style=svg)](https://circleci.com/gh/vue-microfrontends/rate-dogs)
+
 ## What is this?
 
 This is an example microfrontend repo demonstrating how to use [single-spa](https://single-spa.js.org). You can see the code running at https://vue.microfrontends.app.
